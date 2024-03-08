@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+    <link rel="stylesheet" href="form.css">
+    <style>
+        body {
+            background-image:  url("student.jpg");
+            background-color: rgba(0, 0, 0, 0.5);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-blend-mode: multiply;
+            background-position: center;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Registration</h1>
+    </div>
+    <div class="container">
+        <form action="Act3FormRegistration.html">
+            <div class="column">
+                <label for="name" class="label-name">Name</label>
+                <input type="text" id="fname" name="fname" placeholder="First" required>
+                <label for="blank" class="label-name"></label>
+                <input type="text" id="lname" name="lname" placeholder="Last" required>
+            </div>
+            <div class="column">
+                <label for="birth-date">Birth Date</label>
+                <input type="text" id="birth-date" name="birth-date" placeholder="MM/DD/YYYY" onfocus="(this.type='date')"
+                onblur="(this.type='text')" required>
+                <label for="gender">Gender</label>
+                <select name="gender" id="gender" required>
+                    <option value="" hidden>Please Select</option>
+                    <option value="Male">Male</option required>
+                    <option value="Female">Female</option required>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address-line1" name="address-line1" placeholder="Address line 1" required>
+                <input type="text" id="address-line2" name="address-line2" placeholder="Address line 2">
+                <div class="column">
+                    <input type="text" id="city" name="city" placeholder="City" required>
+                    <input type="text" id="zip-code" name="zip-code" placeholder="Postal / Zip Code" required>
+                    <select name="region" id="region" required>
+                        <option value="" hidden>Region</option>
+                        <option value="North America">North America</option>
+                        <option value="South America">South America</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Africa">Africa</option>
+                        <option value="Oceania">Oceania</option>
+                    </select>
+                    <select name="county" id="country" class="classic" required>
+                        <option value="" hidden>Country</option>
+                        <option value="United States">United States</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="France">France</option>
+                        <option value="China">China</option>
+                        <option value="India">India</option>
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="Australia">Australia</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="sample@example.com" required> 
+            </div>
+            <div class="column2">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" required>
+                <label for="work-phone">Work Phone</label>
+                <input type="tel" id="work-phone" name="work-phone" required><br>
+            </div>
+            <div class="form-group">
+                <label for="company" id="asdf">Company</label>
+                <input type="text" id="company" name="company" placeholder="Company" required>
+            </div>
+            <div class="form-group">
+                <label for="courses">Courses</label><br>
+                    <select name="courses" id="courses" required>
+                        <option value="" hidden>Please Select</option>
+                        <option value="BSIT">Bachelor of Science in Information Technology</option >
+                        <option value="BSIS">Bachelor of Science in Information Systems</option>
+                        <option value="BIT-CT">Bachelor in Industrial Technology- Computer Technology</option>
+                    </select>
+            </div>
+            <div class="form-group">
+                <label for="comments">Comments</label>
+                <textarea name="comments" id="comments" cols="30" rows="1"></textarea>
+            </div>
+            <div class="button">
+                <button onclick="history.back()" class="return">Return</button>
+                <div class="right-buttons">
+                    <input type="reset" value="Clear form" id="reset">
+                    <input type="submit" value="Submit" id="submit">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    const phoneInputField = document.querySelector("#phone");
+    const workPhoneInputField = document.querySelector("#work-phone");
+    
+    const phoneInput = window.intlTelInput(phoneInputField, {
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+
+    const workPhoneInput = window.intlTelInput(workPhoneInputField, {
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+</script>
+</script>
+</html>

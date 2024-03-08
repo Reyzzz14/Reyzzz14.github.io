@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sponsor Registration</title>
+    <link rel="stylesheet" href="form.css">
+    <style>
+        body {
+            background-image:  url("sponsor.jpg");
+            background-color: rgba(0, 0, 0, 0.5);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-blend-mode: multiply;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sponsor Registration Form</h1>
+    </div>
+    <div class="container">
+        <form action="Act3FormRegistration.html">
+            <div class="label-group">
+                <label for="prefix">Prefix</label>
+                <input type="text" id="prefix" name="prefix" required>
+
+                <div class="column">
+                    <label for="fname" class="label-name">Name</label><br>
+                    <input type="text" id="fname" name="fname" placeholder="First Name" required>
+                    <label for="" class="label-name"></label>
+                    <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+                </div>
+
+                <label for="pronouns">Preferred pronouns</label>
+                <input type="text" id="pronouns" name="pronouns" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="sample@example.com" required>
+
+                <label for="workPhone">Work Phone</label>
+                <input type="number" id="workPhone" name="workPhone" required>
+
+                <label for="cellPhone">Cell Phone</label>
+                <input type="number" id="cellPhone" name="cellPhone" required>
+
+                <label for="jobTitle">Job Title</label>
+                <input type="text" id="jobTitle" name="jobTitle" required>
+
+                <label for="comp">Company</label>
+                <input type="text" id="comp" name="comp" required>
+            </div>
+
+            <div class="label">
+                <label for="businessAddress">Full Business Address</label><br>
+                <input type="text" id="businessAddress" name="businessAddress" required>
+
+                <label for="compWebsite">Company Website</label><br>
+                <input type="url" id="compWebsite" name="compWebsite">
+
+                <label for="compDesc">Company Description</label><br>
+                <textarea id="compDesc" name="compDesc" cols="30" rows="1"></textarea>
+
+                <label for="compFacebookPage">Company Facebook Page</label><br>
+                <input type="text" id="compFacebookPage" name="compFacebookPage">
+
+                <label for="compTwitter">Company Twitter Handle</label><br>
+                <input type="text" id="compTwitter" name="compTwitter">
+
+                <label for="compLinkedIn">Company LinkedIn Handle</label><br>
+                <input type="text" id="compLinkedIn" name="compLinkedIn">
+
+                <label for="sponLevel">Sponsorship Level</label><br>
+                <fieldset class="field">
+                    <input type="radio" id="gold" name="sponLevel" value="Gold" required>
+                    <label for="gold">Gold</label><br>
+                    <input type="radio" id="diamond" name="sponLevel" value="Diamond" required>
+                    <label for="diamond">Diamond</label><br>
+                    <input type="radio" id="platinum" name="sponLevel" value="Platinum" required>
+                    <label for="platinum">Platinum</label>
+                </fieldset>
+
+                <label for="addGuest">AdditionalGuest (Name,Email)</label><br>
+                <input type="text" id="addGuest" name="addGuest">
+            </div>   
+            <div class="button">
+                <button onclick="history.back()" class="return">Return</button>
+                <div class="right-buttons">
+                    <input type="reset" value="Clear form" id="reset">
+                    <input type="submit" value="Submit" id="submit">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
